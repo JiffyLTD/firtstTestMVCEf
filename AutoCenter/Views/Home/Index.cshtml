@@ -1,0 +1,27 @@
+﻿@{
+    <h1>@ViewBag.Category</h1>
+    foreach (var car in Model.AllCars)
+    {
+    <div class="container marketing">
+        <div class="row featurette" style="background: #f2f2f2">
+            <div class="col-md-7">
+                <h2 class="featurette-heading fw-normal lh-1">@car.CompanyName <span class="text-muted">@car.CarModel</span></h2>
+                <p class="lead">@car.Desc</p>
+                <p class="lead"></p>
+                <p class="lead">@car.Price.ToString("c")</p>
+                <a class="btn" asp-controller="Update" asp-action="UpdateCar" asp-route-id="@car.Id">Изменить</a>
+                <br />
+                <a class="btn" asp-controller="Home" asp-action="Delete" asp-route-id="@car.Id">Удалить</a>
+            </div>
+            <div class="col-md-5">
+                <img src="@car.Img" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="375"  role="img" preserveAspectRatio="xMidYMid slice" focusable="false">
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+    </div>
+    }
+}
+
+
+

@@ -1,0 +1,31 @@
+﻿@model AutoCenter.Data.Models.Car
+@{
+    <h1>@ViewBag.Category</h1>
+
+    <div class="container marketing">
+        <div class="row featurette" style="background: #f2f2f2">
+            <div class="col-md-7">
+                <form asp-action="UpdateCar">
+                    <p>Марка авто</p>
+                    <input type="text" asp-for="CompanyName" />
+                    <p>Модель авто</p>
+                    <input type="text" asp-for="CarModel" />
+                    <p>Описание</p>
+                    <textarea asp-for="Desc"></textarea>
+                    <p>Цена(в рублях)</p>
+                    <input type="text" asp-for="Price" />
+                    <p>URL-Адрес картинки</p>
+                    <textarea asp-for="Img"></textarea>
+                    <p>Категория(1-иномарка2-ОтечественноеАвто)</p>
+                    <input type="text" asp-for="CategoryID" />
+                    <br /><br />
+                    <input type="submit" value="Сохранить" />
+                </form>
+            </div>
+        </div>
+        <hr class="featurette-divider">
+    </div>
+}
+
+
+

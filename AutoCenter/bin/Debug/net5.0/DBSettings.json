@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=DESKTOP-Q2HRBOJ;Database=AutoDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}
